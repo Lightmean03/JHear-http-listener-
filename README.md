@@ -18,7 +18,7 @@ A lightweight HTTP server designed to listen for POST requests and log incoming 
 
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/yourusername/jarvis-ears.git](https://github.com/Lightmean03/JHear-http-listener-.git)
+   git clone https://github.com/Lightmean03/JHear-http-listener-.git
    cd jarvis-ears
    ```
 
