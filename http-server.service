@@ -1,0 +1,23 @@
+[Unit]
+Description=Simple HTTP Server for POST Requests
+After=network.target
+
+[Service]
+Type=simple
+# These will be replaced by the install script
+User=oleary
+Group=oleary
+WorkingDirectory=/opt/http-server
+ExecStart=/usr/bin/python3 /opt/http-server/server.py --port 8080 --log /var/log/http_server.log
+Restart=on-failure
+RestartSec=5s
+StandardOutput=journal
+StandardError=journal
+
+# Security settings - adjust for your system
+# Some of these might be too restrictive for certain environments
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
